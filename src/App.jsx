@@ -11,13 +11,26 @@ import ExponentSix from "./components/ExponentSix";
 function App() {
   const [count, setCount] = useState(0);
 
+  const incrementCount = () => {
+    setCount(count + 1);
+  };
+
+  const decrementCount = () => {
+    setCount(count - 1);
+  };
+
   return (
     <div className="App">
       <h2>
         <em>Counter</em>
       </h2>
 
-      <Counter count={count} setCount={setCount} />
+      <Counter
+        count={count}
+        setCount={setCount}
+        increment={incrementCount}
+        decrement={decrementCount}
+      />
 
       <br />
       <h2>
